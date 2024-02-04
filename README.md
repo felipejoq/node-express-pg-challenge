@@ -55,9 +55,9 @@ npm run dev
 
 - Visitar localhost:3000
 
-```bash
 Visitar http://localhost:3000/ o según el puerto que configuró en el archivo .env del proyecto
-``` 
+Se dispone en la ruta raíz de un front en react.js para interactuar con el back-end.
+
 
 ### Vista previa
 ![Vista previa proyecto front](preview.png)
