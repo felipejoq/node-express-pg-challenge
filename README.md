@@ -58,6 +58,10 @@ npm run dev
 Visitar http://localhost:3000/ o según el puerto que configuró en el archivo .env del proyecto
 Se dispone en la ruta raíz de un front en react.js para interactuar con el back-end.
 
+## Servicios creados:
+
+- GET /posts (Obtiene una lista sin paginar de los posts)
+- POST /posts (Crea un post)
 
 ### Vista previa
 ![Vista previa proyecto front](preview.png)
