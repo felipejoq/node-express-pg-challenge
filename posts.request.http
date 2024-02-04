@@ -1,0 +1,12 @@
+### Send GET request for all posts with pagination
+GET http://localhost:3000/api/posts
+
+### Send POST request with json body
+POST http://localhost:3000/posts
+Content-Type: application/json
+
+{
+  "titulo": "Hello World!",
+  "descripcion": "Hello world descripcion",
+  "img": "https://cdn.pixabay.com/photo/2019/08/17/04/18/morning-4411421_960_720.jpg"
+}
