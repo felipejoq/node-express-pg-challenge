@@ -1,6 +1,5 @@
 import express from 'express';
 import {CorsMiddleware} from "./middlewares/cors.middleware.js";
-import {join} from "node:path";
 
 export class Server {
   constructor({port, routes, acceptedOrigins, publicPath = 'public'}) {

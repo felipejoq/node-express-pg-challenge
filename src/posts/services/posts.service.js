@@ -11,7 +11,7 @@ export class PostService {
   constructor() {
   }
 
-  async getPosts(paginationDto) {
+  async getPosts() {
 
     const [postsResult] = await Promise.all([
       query(GET_ALL_POSTS_NO_LIMITS)
