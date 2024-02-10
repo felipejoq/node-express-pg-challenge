@@ -21,3 +21,16 @@ export const CREATE_A_POST = `
 INSERT INTO posts (titulo, img, descripcion, likes)
 VALUES ($1, $2, $3, $4) RETURNING *
 `;
+
+export const ADD_LIKE_TO_POST = `
+UPDATE posts
+SET likes = likes + 1
+WHERE id = $1
+RETURNING *
+`;
+
+export const DELETE_POST_BY_ID = `
+DELETE FROM posts
+WHERE id = $1
+RETURNING *
+`;

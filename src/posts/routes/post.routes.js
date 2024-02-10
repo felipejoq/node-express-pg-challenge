@@ -12,6 +12,8 @@ export class PostRoutes {
 
     postRouter.get('/', postController.getPosts);
     postRouter.post('/', postController.createPost);
+    postRouter.delete('/:postId', postController.deletePostById);
+    postRouter.put('/like/:postId', postController.addLikePost);
 
     return postRouter;
   }

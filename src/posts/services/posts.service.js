@@ -1,4 +1,9 @@
-import {CREATE_A_POST, GET_ALL_POSTS_NO_LIMITS} from "../../database/queries/posts.queries.js";
+import {
+  ADD_LIKE_TO_POST,
+  CREATE_A_POST,
+  DELETE_POST_BY_ID,
+  GET_ALL_POSTS_NO_LIMITS
+} from "../../database/queries/posts.queries.js";
 import {query} from "../../database/db.js";
 
 export class PostService {
@@ -8,18 +13,7 @@ export class PostService {
 
   async getPosts(paginationDto) {
 
-    // const {page, limit} = paginationDto;
-
-    // const [postsResult, totalPostsResult] = await Promise.all([
-    //  query(GET_ALL_POSTS, [(page - 1) * limit, limit]),
-    //  query(COUNT_TOTAL_POSTS)
-    //]);
-
-    // const posts = postsResult?.rows;
-    // const total = parseInt(totalPostsResult?.rows[0].count);
-    // return getResultsWithPagination({resource: 'posts', data: posts, total, page, limit});
-
-    const [postsResult, totalPostsResult] = await Promise.all([
+    const [postsResult] = await Promise.all([
       query(GET_ALL_POSTS_NO_LIMITS)
     ]);
 
@@ -29,7 +23,7 @@ export class PostService {
 
   async createPost(createPostDto) {
 
-    const { titulo, descripcion, url, likes } = createPostDto;
+    const {titulo, descripcion, url, likes} = createPostDto;
 
     const [result] = await Promise.all([
       query(CREATE_A_POST, [titulo, url, descripcion, likes])
@@ -40,5 +34,25 @@ export class PostService {
     return newPost;
   }
 
+  async addLikeToPost({postId}) {
+
+    const [result] = await Promise.all([
+      query(ADD_LIKE_TO_POST, [postId])
+    ]);
+
+    const [postUpdated] = result.rows;
+
+    return postUpdated;
+  }
+
+  async deletePostById({postId}) {
+    const [result] = await Promise.all([
+      query(DELETE_POST_BY_ID, [postId])
+    ]);
+
+    const [postDeleted] = result.rows;
+
+    return postDeleted;
+  }
 
 }

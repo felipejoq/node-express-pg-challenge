@@ -1,5 +1,5 @@
 ### Send GET request for all posts with pagination
-GET http://localhost:3000/api/posts
+GET http://localhost:3000/posts
 
 ### Send POST request with json body
 POST http://localhost:3000/posts
@@ -8,5 +8,11 @@ Content-Type: application/json
 {
   "titulo": "Hello World!",
   "descripcion": "Hello world descripcion",
-  "img": "https://cdn.pixabay.com/photo/2019/08/17/04/18/morning-4411421_960_720.jpg"
+  "url": "https://cdn.pixabay.com/photo/2019/08/17/04/18/morning-4411421_960_720.jpg"
 }
+
+### Add Like to post by id
+PUT http://localhost:3000/posts/like/5
+
+### Delete post by ID
+DELETE http://localhost:3000/posts/5

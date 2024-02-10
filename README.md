@@ -3,10 +3,11 @@
 Este desafío pone a prueba los conocimientos sobre node.js,
 express y el uso de pg para conectarse a una base de datos PostgreSQL.
 
-El desafío está dividido en dos partes, la primera parte queda explicada
-en el siguiente archivo PDF:
+El desafío está dividido en dos partes, la primera y segunda parte quedan explicadas
+en los siguientes archivos PDF:
 
-- [Parte I](desafio_parte_uno.pdf) - Desafío "Like Me!"
+- [Parte I](01_desafio_parte_uno.pdf) - Desafío "Like Me!"
+- [Parte II](02_desafio_parte_dos.pdf) - Desafío "Like Me!"
 
 ## Para desplegar en local
 
@@ -62,6 +63,8 @@ Se dispone en la ruta raíz de un front en react.js para interactuar con el back
 
 - GET /posts (Obtiene una lista sin paginar de los posts)
 - POST /posts (Crea un post)
+- PUT /posts/like/:id (Añade un like a un post por su ID)
+- DELETE /posts/:id (Elimina un post por su ID)
 
 ### Vista previa
 ![Vista previa proyecto front](preview.png)
