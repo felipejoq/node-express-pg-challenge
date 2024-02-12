@@ -1,6 +1,6 @@
 import { envs } from './config/plugins/envs.js';
-import {AppRouter} from "../routes/v1/appRoutes.js";
 import {Server} from "./Server.js";
+import {AppRouter} from "./routes/v1/app.routes.js";
 
 
 // Función de arranque.
