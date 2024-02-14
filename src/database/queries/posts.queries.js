@@ -6,6 +6,12 @@ OFFSET $1
 LIMIT $2
 `;
 
+export const GET_POST_BY_ID = `
+SELECT *
+FROM posts
+WHERE id = $1
+`
+
 export const GET_ALL_POSTS_NO_LIMITS = `
 SELECT *
 FROM posts
